@@ -5,15 +5,15 @@ DRoP (Donor Repository Platform) is an ASP.NET web application that schedules ap
 
 [1. Wireframe sketches](#1-Wireframe-sketches)
 
-[2. Entity Relationship Diagram](#2-entity-relationship-diagram)
+[2. User Stories](#2-entity-relationship-diagram)
 
-[3. Requirements Traceability Matrix](#3-requirements-traceability-matrix)
+[3. Use Cases](#3-requirements-traceability-matrix)
 
 [4. UML](#4-uml)
 
-[5. Wireframe sketch](#5-wireframe-sketch)
+[5. Use-Case Diagram](#5-wireframe-sketch)
 
-[6. Task list](#6-task-list)
+[6. Requirements](#6-task-list)
 
 
 ## I. Wireframe sketches
