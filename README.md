@@ -1,7 +1,7 @@
 # DRoP
 > This is a project with the MSSA and is currently in progress as I learn of the process of developing a web application.
 > 
-DRoP (Donor Repository Platform) is an ASP.NET web application that schedules appointments and screens potential blood donors
+DRoP (Donor Repository Platform) is an ASP.NET web application that schedules appointments and screens potential blood donors for eligibility.
 
 ## Table of Contents
   * [I. Entity-Relationship Diagram](#i-entity-relationship-diagram)
