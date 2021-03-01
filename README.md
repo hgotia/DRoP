@@ -67,15 +67,15 @@ DRoP (Donor Repository Platform) is an ASP.NET web application that schedules ap
 
 ### A. User Requirements
 1. Blood Donor Center Employee
-  * Log in capabilities.
-  * User can reset.
-  * Given a mobile blood drive, set a location, time, and date of the blood drive.
-  * Set the number of available slots per period (15 minutes, 30 minutes, 1 hour, etc.)
+    + Log in capabilities.
+    + User can reset.
+    + Given a mobile blood drive, set a location, time, and date of the blood drive.
+    + Set the number of available slots per period (15 minutes, 30 minutes, 1 hour, etc.)
     
 2. User/Blood Donor
-  * No log in capability to reduce risk of health information violation
-  * After selecting a date and location, users are able to choose an available timeslot, place their name, phone number, and blood type, and save it to the calendar/database.
-  * Users will have the option to answer the questionnaire that qualifies them for blood donation eligibility.
+    + No log in capability to reduce risk of health information violation
+    + After selecting a date and location, users are able to choose an available timeslot, place their name, phone number, and blood type, and save it to the calendar/database.
+    + Users will have the option to answer the questionnaire that qualifies them for blood donation eligibility.
 
 [Back to top](#table-of-contents)
 
