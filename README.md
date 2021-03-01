@@ -1,21 +1,36 @@
 # DRoP
 DRoP (Donor Repository Platform) is an ASP.NET web application that schedules appointments and screens potential blood donors
 
-## Wireframe sketches
+## Table of Contents
 
-## Home page
+[1. Wireframe sketches](#1-Wireframe-sketches)
+
+[2. Entity Relationship Diagram](#2-entity-relationship-diagram)
+
+[3. Requirements Traceability Matrix](#3-requirements-traceability-matrix)
+
+[4. UML](#4-uml)
+
+[5. Wireframe sketch](#5-wireframe-sketch)
+
+[6. Task list](#6-task-list)
+
+
+## I. Wireframe sketches
+
+### Home page
 ![Home Page](Wireframe/WebPageHome.png)
 
-## Schedule your appointment page
+### Schedule your appointment page
 ![Home Page](Wireframe/WebPageScheduler.png)
 
-## Screening page
+### Screening page
 ![Home Page](Wireframe/WebPageScreener.png)
 
-## Contact us page
+### Contact us page
 ![Home Page](Wireframe/WebPageContactUs.png)
 
-## User Stories
+## II. User Stories
 
 1. As a blood donor, I want to schedule my appointments online so that I don't have to wait in line.
 2. As a blood donor, I want to be able to check if I'm qualified to donate online so that I don't have to waste my time driving to the donation center.
@@ -23,7 +38,7 @@ DRoP (Donor Repository Platform) is an ASP.NET web application that schedules ap
 4. As a blood donor center, I need to be able to collect as much blood as possible so that no one will have to lose their lives because of not having enough blood.
 5. As a blood donor center, I want to know how many donors will be coming every day so that I manage my expectations or recruit more people.
   
-## Use Cases
+## III. Use Cases
 
 1. Given a user, when the user wants to schedule an appointment, then they have to input their full name, phone number, and blood type
 
@@ -41,12 +56,12 @@ DRoP (Donor Repository Platform) is an ASP.NET web application that schedules ap
 
 8. Given a mobile blood drive, when users want to schedule an appointment at that location, then the user can choose at which location they would want to donate.
 
-## Use-Case Diagram
+## IV. Use-Case Diagram
 ![alt text](https://github.com/hgotia/DRoP/blob/main/Requirements/UMLDrop.jpg)
             
-## Requirements
+## V. Requirements
 
-### I. User Requirements
+### A. User Requirements
 1. Blood Donor Center Employee
   * Log in capabilities.
   * User can reset.
@@ -58,13 +73,13 @@ DRoP (Donor Repository Platform) is an ASP.NET web application that schedules ap
   * After selecting a date and location, users are able to choose an available timeslot, place their name, phone number, and blood type, and save it to the calendar/database.
   * Users will have the option to answer the questionnaire that qualifies them for blood donation eligibility.
 
-### II. System Requirements
+### B. System Requirements
 | Component | Minimum | Recommended |
 | --------- | ------- | ----------- |
 | Processor | 1.9 gigahertz (GHz) x86- or x64-bit dual-core processor with SSE2 instruction set | 3.3 gigahertz (GHz) or faster 64-bit dual-core processor with SSE2 instruction set
 | Memory | 2-GB RAM | 4-GB RAM or more |
 | Display | Super VGA with a resolution of 1024 x 768 | Super VGA with a resolution of 1024 x 768 |
 
-### III. Software requirements
+### C. Software requirements
 1. Host/Client: Any machine that can access a webpage with a browser
 2. Development: Visual Studio, C# language, T-SQL, ASP.NET, Git, Azure
