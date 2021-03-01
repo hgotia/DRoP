@@ -4,20 +4,24 @@
 DRoP (Donor Repository Platform) is an ASP.NET web application that schedules appointments and screens potential blood donors
 
 ## Table of Contents
-  * [I. Wireframe sketches](#i-wireframe-sketches)
+  * [I. Entity-Relationship Diagram](#i-entity-relationship-diagram)
+  * [II. Wireframe sketches](#ii-wireframe-sketches)
     + [Home page](#home-page)
     + [Schedule your appointment page](#schedule-your-appointment-page)
     + [Screening page](#screening-page)
     + [Contact us page](#contact-us-page)
-  * [II. User Stories](#ii-user-stories)
-  * [III. Use Cases](#iii-use-cases)
-  * [IV. Use-Case Diagram](#iv-use-case-diagram)
-  * [V. Requirements](#v-requirements)
-    + [A. User Requirements](#a-user-requirements)
-    + [B. System Requirements](#b-system-requirements)
-    + [C. Software requirements](#c-software-requirements)
+  * [III. User Stories](#iii-user-stories)
+  * [IV. Use Cases](#iv-use-cases)
+  * [V. Use-Case Diagram](#v-use-case-diagram)
+  * [VI. Requirements](#vi-requirements)
+    + [User Requirements](#a-user-requirements)
+    + [System Requirements](#b-system-requirements)
+    + [Software requirements](#c-software-requirements)
 
-## I. Wireframe sketches
+## I. Entity-Relationship Diagram
+<img src="Wireframe/ERD2.jpeg" width="800">
+
+## II. Wireframe sketches
 
 ### Home page
 <img src="Wireframe/WebPageHome.png" width="800">
@@ -39,7 +43,7 @@ DRoP (Donor Repository Platform) is an ASP.NET web application that schedules ap
 
 [Back to top](#table-of-contents)
 
-## II. User Stories
+## III. User Stories
 
 1. As a blood donor, I want to schedule my appointments online so that I don't have to wait in line.
 2. As a blood donor, I want to be able to check if I'm qualified to donate online so that I don't have to waste my time driving to the donation center.
@@ -49,7 +53,7 @@ DRoP (Donor Repository Platform) is an ASP.NET web application that schedules ap
 
 [Back to top](#table-of-contents)
 
-## III. Use Cases
+## IV. Use Cases
 
 1. Given a user, when the user wants to schedule an appointment, then they have to input their full name, phone number, and blood type
 2. Given a user, when the user does not completely fill out their details, then they will not be able to schedule their appointment.
@@ -62,12 +66,12 @@ DRoP (Donor Repository Platform) is an ASP.NET web application that schedules ap
 
 [Back to top](#table-of-contents)
 
-## IV. Use-Case Diagram
+## V. Use-Case Diagram
 <img src="Requirements/UMLDrop.jpg" width="800">
 
 [Back to top](#table-of-contents)
    
-## V. Requirements
+## VI. Requirements
 
 ### A. User Requirements
 1. Blood Donor Center Employee
