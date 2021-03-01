@@ -1,4 +1,4 @@
-##**User Stories**
+## User Stories
 
 1. As a blood donor, I want to schedule my appointments online so that I don't have to wait in line.
 2. As a blood donor, I want to be able to check if I'm qualified to donate online so that I don't have to waste my time driving to the donation center.
