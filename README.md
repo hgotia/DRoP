@@ -20,19 +20,23 @@ DRoP (Donor Repository Platform) is an ASP.NET web application that schedules ap
 ## I. Wireframe sketches
 
 ### Home page
-![Home Page](Wireframe/WebPageHome.png)
+<img src="Wireframe/WebPageHome.png" width="800">
+
 [Back to top](#table-of-contents)
 
 ### Schedule your appointment page
-![Home Page](Wireframe/WebPageScheduler.png)
+<img src="Wireframe/WebPageScheduler.png" width="800">
+
 [Back to top](#table-of-contents)
 
 ### Screening page
-![Home Page](Wireframe/WebPageScreener.png)
+<img src="Wireframe/WebPageScreener.png" width="800">
+
 [Back to top](#table-of-contents)
 
 ### Contact us page
-![Home Page](Wireframe/WebPageContactUs.png)
+<img src="Wireframe/WebPageContactUs.png" width="800">
+
 [Back to top](#table-of-contents)
 
 ## II. User Stories
@@ -59,7 +63,7 @@ DRoP (Donor Repository Platform) is an ASP.NET web application that schedules ap
 [Back to top](#table-of-contents)
 
 ## IV. Use-Case Diagram
-![alt text](https://github.com/hgotia/DRoP/blob/main/Requirements/UMLDrop.jpg)
+<img src="Requirements/UMLDrop.jpg" width="800">
 
 [Back to top](#table-of-contents)
    
