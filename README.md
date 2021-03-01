@@ -2,19 +2,18 @@
 DRoP (Donor Repository Platform) is an ASP.NET web application that schedules appointments and screens potential blood donors
 
 ## Table of Contents
-
-[1. Wireframe sketches](#1-Wireframe-sketches)
-
-[2. User Stories](#2-User-stories)
-
-[3. Use Cases](#3-Use-cases)
-
-[4. UML](#4-UML)
-
-[5. Use-Case Diagram](#5-Use-Case-Diagram)
-
-[6. Requirements](#6-Requirements)
-
+  * [I. Wireframe sketches](#i-wireframe-sketches)
+    + [Home page <a](#home-page--a)
+    + [Schedule your appointment page](#schedule-your-appointment-page)
+    + [Screening page](#screening-page)
+    + [Contact us page](#contact-us-page)
+  * [II. User Stories](#ii-user-stories)
+  * [III. Use Cases](#iii-use-cases)
+  * [IV. Use-Case Diagram](#iv-use-case-diagram)
+  * [V. Requirements](#v-requirements)
+    + [A. User Requirements](#a-user-requirements)
+    + [B. System Requirements](#b-system-requirements)
+    + [C. Software requirements](#c-software-requirements)
 
 ## I. Wireframe sketches
 
