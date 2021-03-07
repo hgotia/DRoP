@@ -121,7 +121,7 @@ DRoP (Donor Repository Platform) is an ASP.NET web application that schedules ap
 | 202 | 2.2, 3.2 | Verify that users are able to log in with valid user/password combinations | Not Tested |  |
 | 203 | 2.3, 3.2, 3.3 | Ensure that created blood drives appear in the calendar/schedule donation page | Not Tested |  |
 | 204 | 2.4 | Verify that donors are able to select a time, occupies, and disables that specific timeslot | Not Tested |  | 
-| 205 | 2.5 | Donors are able to self-screen and check for dontaion eligibility | Not Testedion |  |
+| 205 | 2.5 | Donors are able to self-screen and check for dontaion eligibility | Not Tested |  |
 | 300 | 3.4 | Eligible donors who answer questions correctly will have 'eligible' displayed after the last question | Not Tested |  |
 | 301 | 3.5 | Ineligible donors will have 'ineligible' and the reason for ineligibility displayed after the last question | Not Tested |  |
 
