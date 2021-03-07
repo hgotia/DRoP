@@ -16,8 +16,9 @@ DRoP (Donor Repository Platform) is an ASP.NET web application that schedules ap
   * [VI. Requirements](#vi-requirements)
     + [User Requirements](#a-user-requirements)
     + [Test Planning](#b-test-planning)
-    + [System Requirements](#c-system-requirements)
-    + [Software requirements](#d-software-requirements)
+    + [Test Table](#c-test-table)
+    + [System Requirements](#d-system-requirements)
+    + [Software requirements](#e-software-requirements)
 
 ## I. Entity-Relationship Diagram
 <img src="Wireframe/ERD2.jpeg" width="800">
@@ -102,16 +103,29 @@ DRoP (Donor Repository Platform) is an ASP.NET web application that schedules ap
 | 2.3 | Employees are able to set a location, date, and hours of a blood drive | Demonstration | 202 |
 | 2.4 | Donors are able to select a date and set an appointment for a specific time | Demonstration | 203 | 
 | 2.5 | Donors are able to self-screen and check for dontaion eligibility | Demonstration | 204 |
-| 3.0 | Given a valid user/password, the system lets the employee log in | Test | 300 | 
-| 3.1 | Given an invalid user/password, the system does not let the employee log in | Test | 301 |
-| 3.2 | Donors are able to select a date and time, and set an appointment for a specified time | Test | 302 | 
-| 3.3 | Donors are not able to select filled timeslots and days which are specified as taken, or closed (i.e. weekends, holidays, etc.) | Test | 303 |
-| 3.4 | Eligible donors who answer questions correctly will have 'eligible' displayed after the last question | Test | 304 |
-| 3.5 | Ineligible donors will have 'ineligible' and the reason for ineligibility displayed after the last question | Test | 305 |
+| 3.0 | Given a valid user/password, the system lets the employee log in | Test | 201 | 
+| 3.1 | Given an invalid user/password, the system does not let the employee log in | Test | 202 |
+| 3.2 | Donors are able to select a date and time, and set an appointment for a specified time | Test | 203 | 
+| 3.3 | Donors are not able to select filled timeslots and days which are specified as taken, or closed (i.e. weekends, holidays, etc.) | Test | 203 |
+| 3.4 | Eligible donors who answer questions correctly will have 'eligible' displayed after the last question | Test | 300 |
+| 3.5 | Ineligible donors will have 'ineligible' and the reason for ineligibility displayed after the last question | Test | 301 |
 
 [Back to top](#table-of-contents)
 
-### C. System Requirements
+### B. Test Table
+| TestID | ReqID | Test Procedure | Current Status | TimeStamp |
+| -------| ----- | -------------- | -------------- | --------- | 
+| 100 | 1.0 | Verify that each page contains every content (image, calendars, buttons, etc.) | Not Tested |  |
+| 101 | 1.1 | Scroll through every screening question and verify that all are present. | Not Tested |  |
+| 201 | 2.1, 3.0 | Verify that old passwords do not allow employees to log in once changed | Not Tested |  |
+| 202 | 2.2, 3.2 | Verify that users are able to log in with valid user/password combinations | Not Tested |  |
+| 203 | 2.3, 3.2, 3.3 | Ensure that created blood drives appear in the calendar/schedule donation page | Not Tested |  |
+| 204 | 2.4 | Verify that donors are able to select a time, occupies, and disables that specific timeslot | Not Tested |  | 
+| 205 | 2.5 | Donors are able to self-screen and check for dontaion eligibility | DemonstratNot Testedion |  |
+| 300 | 3.4 | Eligible donors who answer questions correctly will have 'eligible' displayed after the last question | Not Tested |  |
+| 301 | 3.5 | Ineligible donors will have 'ineligible' and the reason for ineligibility displayed after the last question | Not Tested |  |
+
+### D. System Requirements
 | Component | Minimum | Recommended |
 | --------- | ------- | ----------- |
 | Processor | 1.9 gigahertz (GHz) x86- or x64-bit dual-core processor with SSE2 instruction set | 3.3 gigahertz (GHz) or faster 64-bit dual-core processor with SSE2 instruction set
@@ -120,7 +134,7 @@ DRoP (Donor Repository Platform) is an ASP.NET web application that schedules ap
 
 [Back to top](#table-of-contents)
 
-### D. Software requirements
+### E. Software requirements
 1. Host/Client: Any machine that can access a webpage with a browser
 2. Development: Visual Studio, C# language, T-SQL, ASP.NET, Git, Azure
 
