@@ -112,7 +112,7 @@ DRoP (Donor Repository Platform) is an ASP.NET web application that schedules ap
 
 [Back to top](#table-of-contents)
 
-### B. Test Table
+### C. Test Table
 | TestID | ReqID | Test Procedure | Current Status | TimeStamp |
 | -------| ----- | -------------- | -------------- | --------- | 
 | 100 | 1.0 | Verify that each page contains every content (image, calendars, buttons, etc.) | Not Tested |  |
