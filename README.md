@@ -91,7 +91,26 @@ DRoP (Donor Repository Platform) is an ASP.NET web application that schedules ap
 
 [Back to top](#table-of-contents)
 
-### B. System Requirements
+### B. Test Planning
+| Requirement ID | Requirement Description | Test Method | TestID |
+| -------------- | ----------------------- | ----------- | ------ | 
+| 1.0 | All pages display their contents correctly (Home page, scheduling page, screening page, and contact us page) | Inspection | 100 |
+| 1.1 | All questions for screening only display the necessary information | Inspection | 101 |
+| 2.1 | Employees are able to set a new password | Demonstration | 200 |
+| 2.2 | Employees are able to log in given a valid user/password combination | Demonstration | 201 |
+| 2.3 | Employees are able to set a location, date, and hours of a blood drive | Demonstration | 202 |
+| 2.4 | Donors are able to select a date and set an appointment for a specific time | Demonstration | 203 | 
+| 2.5 | Donors are able to self-screen and check for dontaion eligibility | Demonstration | 204 |
+| 3.0 | Given a valid user/password, the system lets the employee log in | Test | 300 | 
+| 3.1 | Given an invalid user/password, the system does not let the employee log in | Test | 301 |
+| 3.2 | Donors are able to select a date and time, and set an appointment for a specified time | Test | 302 | 
+| 3.3 | Donors are not able to select filled timeslots and days which are specified as taken, or closed (i.e. weekends, holidays, etc.) | Test | 303 |
+| 3.4 | Eligible donors who answer questions correctly will have 'eligible' displayed after the last question | Test | 304 |
+| 3.5 | Ineligible donors will have 'ineligible' and the reason for ineligibility displayed after the last question | Test | 305 |
+
+[Back to top](#table-of-contents)
+
+### C. System Requirements
 | Component | Minimum | Recommended |
 | --------- | ------- | ----------- |
 | Processor | 1.9 gigahertz (GHz) x86- or x64-bit dual-core processor with SSE2 instruction set | 3.3 gigahertz (GHz) or faster 64-bit dual-core processor with SSE2 instruction set
@@ -100,7 +119,7 @@ DRoP (Donor Repository Platform) is an ASP.NET web application that schedules ap
 
 [Back to top](#table-of-contents)
 
-### C. Software requirements
+### D. Software requirements
 1. Host/Client: Any machine that can access a webpage with a browser
 2. Development: Visual Studio, C# language, T-SQL, ASP.NET, Git, Azure
 
