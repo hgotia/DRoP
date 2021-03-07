@@ -93,7 +93,7 @@ DRoP (Donor Repository Platform) is an ASP.NET web application that schedules ap
 [Back to top](#table-of-contents)
 
 ### B. Test Planning
-| Requirement ID | Requirement Description | Test Method | TestID |
+| ReqID | Requirement Description | Test Method | TestID |
 | -------------- | ----------------------- | ----------- | ------ | 
 | 1.0 | All pages display their contents correctly (Home page, scheduling page, screening page, and contact us page) | Inspection | 100 |
 | 1.1 | All questions for screening only display the necessary information | Inspection | 101 |
