@@ -1,6 +1,0 @@
-C:\Users\TIM ASUS\source\DRoP_Db_First\DropDB\bin\Debug\DropDB.dacpac
-C:\Users\TIM ASUS\source\DRoP_Db_First\DropDB\bin\Debug\DropDB.dll
-C:\Users\TIM ASUS\source\DRoP_Db_First\DropDB\bin\Debug\DropDB.pdb
-C:\Users\TIM ASUS\source\DRoP_Db_First\DropDB\obj\Debug\DropDB.sqlprojAssemblyReference.cache
-C:\Users\TIM ASUS\source\DRoP_Db_First\DropDB\obj\Debug\DropDB.dll
-C:\Users\TIM ASUS\source\DRoP_Db_First\DropDB\obj\Debug\DropDB.pdb
