@@ -21,7 +21,7 @@ DRoP (Donor Repository Platform) is an ASP.NET web application that schedules ap
     + [Software requirements](#e-software-requirements)
   * [VII. Protype](#vii-prototype)
   * [VIII. Database Diagram](#viii-database-diagram)
-  * [IX. Database Connection Demonstration](#ix-database-connection-demonstration)
+  * [IX. Database Integration](#ix-database-integration)
 
 ## I. Entity-Relationship Diagram
 <img src="Wireframe/ERD2.jpeg" width="800">
@@ -158,7 +158,7 @@ Check it out by clicking --> [here!](https://xd.adobe.com/view/b405d513-1ec9-4cc
 
 [Back to top](#table-of-contents)
 
-## IX. Database Connection Demonstration
+## IX. Database Integration
 
 Shows the question table with no entries in SSMS.
 
