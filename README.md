@@ -159,5 +159,23 @@ Check it out by clicking --> [here!](https://xd.adobe.com/view/b405d513-1ec9-4cc
 [Back to top](#table-of-contents)
 
 ## IX. Database Connection Demonstration
-![image]
 
+Shows the question table with no entries in SSMS.
+
+![image](https://github.com/hgotia/DRoP/blob/main/Requirements/DbConnectionWorx/DBworks1.png)
+
+As well as in the DonorQuestions/Index
+
+![image](https://github.com/hgotia/DRoP/blob/main/Requirements/DbConnectionWorx/DBworks2.png)
+
+Adding a question using the Create in the webApp
+
+![image](https://github.com/hgotia/DRoP/blob/main/Requirements/DbConnectionWorx/DBworks3.png)
+
+Clicked Create, and now shows in the DonorQuestions/Index
+
+![image](https://github.com/hgotia/DRoP/blob/main/Requirements/DbConnectionWorx/DBworks4.png)
+
+As well as in SSMS
+
+![image](https://github.com/hgotia/DRoP/blob/main/Requirements/DbConnectionWorx/DBworks5.png)
