@@ -153,6 +153,6 @@ Check it out by clicking --> [here!](https://xd.adobe.com/view/b405d513-1ec9-4cc
 [Back to top](#table-of-contents)
 
 ## VIII. Database Diagram
-![image](https://github.com/hgotia/DRoP/blob/main/Requirements/DbDiagram.png)
+![image](https://github.com/hgotia/DRoP/blob/main/Requirements/DBDiagram2.png)
 
 [Back to top](#table-of-contents)
