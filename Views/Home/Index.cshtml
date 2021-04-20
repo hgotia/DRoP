@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Drop.Web</title>
+</head>
+    <div class="text-center">
+    <h1 class="display-1">DRoP</h1>
+        <button type="button" style="height:60px;width:250px;border-radius:18px;font-size:18px">
+            @Html.ActionLink("Schedule an Appointment", "Create", "Donors")
+        </button>
+
+        <button type="button" style="height:60px;width:250px;border-radius:18px;font-size:18px">
+            @Html.ActionLink("Check for Eligibility", "Index", "DonorQuestions")
+        </button>
+    </div>
+<body>
+</body>
