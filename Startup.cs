@@ -26,6 +26,7 @@ namespace Drop.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddRazorPages();
             services.AddDbContext<DropDatabaseContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("localconnection")));
         }
 
@@ -47,6 +48,7 @@ namespace Drop.Web
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -54,6 +56,7 @@ namespace Drop.Web
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
             });
         }
     }
