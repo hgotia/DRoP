@@ -24,6 +24,11 @@ namespace Drop.Web.Controllers
             return View(await _context.DonorQuestions.ToListAsync());
         }
 
+        public async Task<IActionResult> DonorView()
+        {
+            return View(await _context.DonorQuestions.ToListAsync());
+        }
+
         // GET: DonorQuestions/Details/5
         public async Task<IActionResult> Details(int? id)
         {

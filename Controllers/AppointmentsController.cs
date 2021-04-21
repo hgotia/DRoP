@@ -36,6 +36,7 @@ namespace Drop.Web.Controllers
             var appointment = await _context.Appointments
                 .Include(a => a.Donor)
                 .FirstOrDefaultAsync(m => m.AppointmentId == id);
+
             if (appointment == null)
             {
                 return NotFound();
