@@ -19,14 +19,17 @@ namespace Drop.Web.Controllers
         }
 
         // GET: DonorQuestions
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string sortOrder)
         {
-            return View(await _context.DonorQuestions.ToListAsync());
-        }
+            ViewBag.QSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
 
-        public async Task<IActionResult> DonorView()
-        {
-            return View(await _context.DonorQuestions.ToListAsync());
+            var questions = from s in _context.DonorQuestions
+                              select s;
+
+            questions = questions.OrderBy(s => s.Question);
+
+            return View(questions.ToList());
+            //return View(await _context.DonorQuestions.ToListAsync());
         }
 
         // GET: DonorQuestions/Details/5

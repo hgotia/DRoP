@@ -1,4 +1,5 @@
 using Drop.Web.models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +28,12 @@ namespace Drop.Web
         {
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            //services.AddAuthorization(opt =>
+            //{
+            //    opt.FallbackPolicy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+            //});
+
             services.AddDbContext<DropDatabaseContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("localconnection")));
         }
 

@@ -19,10 +19,44 @@ namespace Drop.Web.Controllers
         }
 
         // GET: Appointments
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string sortOrder, string searchString)
         {
-            var dropDatabaseContext = _context.Appointments.Include(a => a.Donor);
-            return View(await dropDatabaseContext.ToListAsync());
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+            ViewBag.TimeSortParm = sortOrder == "Time" ? "time_desc" : "Time";
+
+            var appointment = from s in _context.Appointments
+                           select s;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                appointment = appointment.Where(s => s.LastName.Contains(searchString)
+                                       || s.FirstName.Contains(searchString));
+            }
+
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    appointment = appointment.OrderByDescending(s => s.LastName);
+                    break;
+                case "Date":
+                    appointment = appointment.OrderBy(s => s.Date);
+                    break;
+                case "date_desc":
+                    appointment = appointment.OrderByDescending(s => s.Date);
+                    break;
+                case "Time":
+                    appointment = appointment.OrderBy(s => s.Time);
+                    break;
+                case "time_desc":
+                    appointment = appointment.OrderByDescending(s => s.Time);
+                    break;
+                default:
+                    appointment = appointment.OrderBy(s => s.LastName);
+                    break;
+            }
+            return View(appointment.ToList());
+            //return View(await _context.Appointments.ToListAsync());
         }
 
         // GET: Appointments/Details/5
@@ -34,9 +68,7 @@ namespace Drop.Web.Controllers
             }
 
             var appointment = await _context.Appointments
-                .Include(a => a.Donor)
                 .FirstOrDefaultAsync(m => m.AppointmentId == id);
-
             if (appointment == null)
             {
                 return NotFound();
@@ -48,7 +80,6 @@ namespace Drop.Web.Controllers
         // GET: Appointments/Create
         public IActionResult Create()
         {
-            ViewData["DonorId"] = new SelectList(_context.Donors, "DonorId", "FirstName");
             return View();
         }
 
@@ -57,7 +88,7 @@ namespace Drop.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("AppointmentId,DonorId,Date,Time")] Appointment appointment)
+        public async Task<IActionResult> Create([Bind("AppointmentId,FirstName,LastName,PhoneNumber,Date,Time")] Appointment appointment)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +96,6 @@ namespace Drop.Web.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction("thanks");
             }
-            ViewData["DonorId"] = new SelectList(_context.Donors, "DonorId", "FirstName", appointment.DonorId);
             return View(appointment);
         }
 
@@ -82,7 +112,6 @@ namespace Drop.Web.Controllers
             {
                 return NotFound();
             }
-            ViewData["DonorId"] = new SelectList(_context.Donors, "DonorId", "FirstName", appointment.DonorId);
             return View(appointment);
         }
 
@@ -91,7 +120,7 @@ namespace Drop.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("AppointmentId,DonorId,Date,Time")] Appointment appointment)
+        public async Task<IActionResult> Edit(int id, [Bind("AppointmentId,FirstName,LastName,PhoneNumber,Date,Time")] Appointment appointment)
         {
             if (id != appointment.AppointmentId)
             {
@@ -118,7 +147,6 @@ namespace Drop.Web.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DonorId"] = new SelectList(_context.Donors, "DonorId", "FirstName", appointment.DonorId);
             return View(appointment);
         }
 
@@ -131,7 +159,6 @@ namespace Drop.Web.Controllers
             }
 
             var appointment = await _context.Appointments
-                .Include(a => a.Donor)
                 .FirstOrDefaultAsync(m => m.AppointmentId == id);
             if (appointment == null)
             {
@@ -161,6 +188,5 @@ namespace Drop.Web.Controllers
         {
             return View();
         }
-
     }
 }

@@ -17,15 +17,14 @@ namespace Drop.Web.models
         {
         }
 
-        public virtual DbSet<AdminUser> AdminUsers { get; set; }
         public virtual DbSet<Appointment> Appointments { get; set; }
-        public virtual DbSet<Donor> Donors { get; set; }
         public virtual DbSet<DonorQuestion> DonorQuestions { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
                 optionsBuilder.UseSqlServer("Data Source=ASUS-G0T14;Initial Catalog=DropDatabase;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             }
         }
@@ -34,42 +33,11 @@ namespace Drop.Web.models
         {
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
 
-            modelBuilder.Entity<AdminUser>(entity =>
-            {
-                entity.HasKey(e => e.UserId)
-                    .HasName("PK__AdminUse__1788CCAC848EA372");
-
-                entity.Property(e => e.UserId).HasColumnName("UserID");
-
-                entity.Property(e => e.Pwd)
-                    .IsRequired()
-                    .HasMaxLength(25)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.UserName)
-                    .IsRequired()
-                    .HasMaxLength(15)
-                    .IsUnicode(false);
-            });
-
             modelBuilder.Entity<Appointment>(entity =>
             {
                 entity.Property(e => e.AppointmentId).HasColumnName("AppointmentID");
 
                 entity.Property(e => e.Date).HasColumnType("date");
-
-                entity.Property(e => e.DonorId).HasColumnName("DonorID");
-
-                entity.HasOne(d => d.Donor)
-                    .WithMany(p => p.Appointments)
-                    .HasForeignKey(d => d.DonorId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Appointme__Donor__47DBAE45");
-            });
-
-            modelBuilder.Entity<Donor>(entity =>
-            {
-                entity.Property(e => e.DonorId).HasColumnName("DonorID");
 
                 entity.Property(e => e.FirstName)
                     .IsRequired()
@@ -90,7 +58,7 @@ namespace Drop.Web.models
             modelBuilder.Entity<DonorQuestion>(entity =>
             {
                 entity.HasKey(e => e.QuestionId)
-                    .HasName("PK__DonorQue__0DC06F8CC73C7A6F");
+                    .HasName("PK__DonorQue__0DC06F8C26E83A1B");
 
                 entity.Property(e => e.QuestionId).HasColumnName("QuestionID");
 

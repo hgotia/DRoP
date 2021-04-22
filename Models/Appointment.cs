@@ -9,17 +9,26 @@ namespace Drop.Web.models
     public partial class Appointment
     {
         public int AppointmentId { get; set; }
-        public int DonorId { get; set; }
+        [Required(ErrorMessage = "First name required")]
+        public string FirstName { get; set; }
 
-        [DataType(DataType.Date)]
+        [Required(ErrorMessage ="Last name required")]
+        public string LastName { get; set; }
+
+        [DataType(DataType.PhoneNumber)]
+        [Required(ErrorMessage = "Telephone Number Required")]
+        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Entered phone format is not valid.")]
+        public string PhoneNumber { get; set; }
+
+        [Required(ErrorMessage = "Please select a date")]
         [DisplayFormat(DataFormatString = "{0:MMM dd, yyyy}")]
+        [DataType(DataType.Date)]
         public DateTime Date { get; set; }
 
-        [DataType(DataType.Time)]
+        [Required(ErrorMessage = "Please select a time")]
         [DisplayFormat(DataFormatString = "{0:hh\\:mm}")]
+        [DataType(DataType.Time)]
         
         public TimeSpan Time { get; set; }
-
-        public virtual Donor Donor { get; set; }
     }
 }

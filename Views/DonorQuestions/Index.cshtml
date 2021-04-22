@@ -13,7 +13,7 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Question)
+                @Html.ActionLink("Question", "Index", new { sortOrder = ViewBag.QSortParm })
             </th>
             <th></th>
         </tr>
