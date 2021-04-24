@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -30,5 +31,18 @@ namespace Drop.Web.models
         [DataType(DataType.Time)]
         
         public TimeSpan Time { get; set; }
+
+
+        //public IEnumerable<SelectListItem> ListOfDates
+        //{
+        //    get
+        //    {
+        //        foreach (var item in ListOfDates) yield return new SelectListItem()
+        //        {
+        //            Text = item.ToString(),
+        //            Value = item.ToString()
+        //        };
+        //    }
+        //}
     }
 }

@@ -19,7 +19,7 @@ namespace Drop.Web.Controllers
         }
 
         // GET: Appointments
-        public async Task<IActionResult> Index(string sortOrder, string searchString)
+        public async Task<IActionResult> Index(string sortOrder, string searchString, DateTime searchDate)
         {
             ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
@@ -33,6 +33,14 @@ namespace Drop.Web.Controllers
                 appointment = appointment.Where(s => s.LastName.Contains(searchString)
                                        || s.FirstName.Contains(searchString));
             }
+
+            //remove if doesn't work
+            //if (!String.IsNullOrEmpty(searchDate.ToString()))
+            //{
+            //    appointment = appointment.Where(s => s.Date.Year == searchDate.Year &&
+            //                                        s.Date.Month == searchDate.Month &&
+            //                                        s.Date.Day == searchDate.Day);
+            //}
 
             switch (sortOrder)
             {
@@ -52,7 +60,7 @@ namespace Drop.Web.Controllers
                     appointment = appointment.OrderByDescending(s => s.Time);
                     break;
                 default:
-                    appointment = appointment.OrderBy(s => s.LastName);
+                    appointment = appointment.OrderBy(s => s.Date);
                     break;
             }
             return View(appointment.ToList());
