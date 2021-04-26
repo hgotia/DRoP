@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Drop.Web.models.DonorQuestion>
+
+@{
+    ViewData["Title"] = "Questions";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h1>Screening Questions</h1>
+
+<p>
+    <strong>Disclaimer:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th >
+                @Html.ActionLink("", "Index", new { sortOrder = ViewBag.QSortParm })
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Question)
+                </td>
+                <td>
+                    <button type="submit" class="btn btn-success btn-sm pull dropright" >Yes</button>
+                    <button type="submit" class="btn btn-danger btn-sm pull dropright" >No</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

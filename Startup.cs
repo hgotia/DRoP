@@ -62,7 +62,7 @@ namespace Drop.Web
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=DonorViews}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }

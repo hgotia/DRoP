@@ -1,5 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
 <head>
@@ -7,21 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Drop.Web</title>
 </head>
-
-<p>Admin View | <a asp-controller="donorviews" asp-action="index">Donor View Link</a> </p> 
-
-
 <body>
+    <p>Donor view</p>
     <div class="jumbotron text-center" style="background-color:white">
         <h1 class="display-1"><strong>DRoP</strong></h1>
         <p>The quick brown fox jumps over the lazy dog.</p>
     </div>
-    @*<div class=" text-center">
+    <div class=" text-center">
         <button type="button" style="height:60px;width:250px;border-radius:18px;font-size:18px;background-color:white">
-            @Html.ActionLink("Schedule an Appointment", "Create", "Appointments")
+            @Html.ActionLink("Schedule an Appointment", "ScheduleAppointment", "DonorViews")
         </button>
         <button type="button" style="height:60px;width:250px;border-radius:18px;font-size:18px;background-color:white">
-            @Html.ActionLink("Check for Eligibility", "Index", "DonorQuestions")
+            @Html.ActionLink("Check for Eligibility", "Questions", "DonorViews")
         </button>
-    </div>*@
+    </div>
 </body>
