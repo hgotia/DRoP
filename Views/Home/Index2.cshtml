@@ -5,10 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 </head>
-<body style="min-width:100%">
-    <div class="jumbotron" style="background-color:white">
-        <h1 class="text-center" style="font-size: 15vw;background: rgb(255 255 255);color: rgb(135,14,14);transform: perspective(0px);">DRoP</h1>
-        <p style="padding-right: 10%;padding-left: 10%;color: rgb(135,14,14);text-align: center;font-size: 2vw;"><strong>Don't wait. Check your eligibility and schedule your donation today!</strong></p>
+<body>
+    <div class="jumbotron text-center" style="background-color:white">
+        <h1 class="display-1" style="color:darkred"><strong>DRoP</strong></h1>
+        <p style="font-size:20px">Don't wait. Check your eligibility and schedule your donation today!</p>
+    </div>
+    <div style="text-align:center">
+        <input style="height:60px;width:250px;border-radius:18px;font-size:18px;background-color:white" type="button" value="Schedule an Appointment" onclick="location.href='@Url.Action("ScheduleAppointment", "DonorViews")'" />
+        <input style="height:60px;width:250px;border-radius:18px;font-size:18px;background-color:white" type="button" value="Check for Eligibility" onclick="location.href='@Url.Action("Questions", "DonorViews")'" />
     </div>
 </body>
 </html>

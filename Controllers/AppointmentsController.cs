@@ -24,6 +24,7 @@ namespace Drop.Web.Controllers
             ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
             ViewBag.TimeSortParm = sortOrder == "Time" ? "time_desc" : "Time";
+            ViewBag.ShowTodayParm = sortOrder == "Today" ? "Date" : "Today";
 
             var appointment = from s in _context.Appointments
                            select s;
@@ -32,14 +33,17 @@ namespace Drop.Web.Controllers
             {
                 appointment = appointment.Where(s => s.LastName.Contains(searchString)
                                        || s.FirstName.Contains(searchString));
+
             }
 
-            //remove if doesn't work
+            //It's either this works, or the other functions don't.
             //if (!String.IsNullOrEmpty(searchDate.ToString()))
             //{
-            //    appointment = appointment.Where(s => s.Date.Year == searchDate.Year &&
-            //                                        s.Date.Month == searchDate.Month &&
-            //                                        s.Date.Day == searchDate.Day);
+            //    appointment = appointment.Where(s => s.Date.Day.ToString().Contains(searchDate.Day.ToString())
+            //                                         && s.Date.Month.ToString().Contains(searchDate.Month.ToString())
+            //                                         && s.Date.Year.ToString().Contains(searchDate.Year.ToString()));
+
+            //    return View(appointment.ToList());
             //}
 
             switch (sortOrder)
@@ -50,6 +54,11 @@ namespace Drop.Web.Controllers
                 case "Date":
                     appointment = appointment.OrderBy(s => s.Date);
                     break;
+
+                case "Today":
+                    appointment = appointment.Where(s => s.Date > DateTime.Now);
+                    break;
+
                 case "date_desc":
                     appointment = appointment.OrderByDescending(s => s.Date);
                     break;

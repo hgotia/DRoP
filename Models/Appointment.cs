@@ -19,6 +19,7 @@ namespace Drop.Web.models
         [DataType(DataType.PhoneNumber)]
         [Required(ErrorMessage = "Telephone Number Required")]
         [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Entered phone format is not valid.")]
+
         public string PhoneNumber { get; set; }
 
         [Required(ErrorMessage = "Please select a date")]

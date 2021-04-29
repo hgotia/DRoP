@@ -12,16 +12,23 @@
 
 @using (Html.BeginForm())
 {
-    <p>
-        Find by name: @Html.TextBox("SearchString")
-        <input type="submit" value="Search" />
-    </p>
-    @*<p>
-        Find by date:  @Html.DropDownListFor(
-        <input type="submit" value="Search" />
+    <div class="row">
+        <div class="col-6">
+            <p>
+                Find by name: @Html.TextBox("SearchString")
+                <input type="submit" value="Search" />
+            </p>
+        </div>
+        <div class="col-6">
+            @Html.ActionLink("Hide/Show Past Dates", "Index", new { sortOrder = ViewBag.ShowTodayParm })
+        </div>
+    </div>
+
+    @*<p style="padding-right:50px">
+         Find by date: @Html.TextBox("SearchDate")
+        <input type="submit" value="Search"/>
     </p>*@
 }
-
 <table class="table">
     <thead>
         <tr>
@@ -40,7 +47,8 @@
             <th>
                 Phone Number
             </th>
-            <th></th>
+            <th>
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -48,6 +56,7 @@
         {
             <tr>
                 <td>
+                    @*@Html.DisplayFor(modelItem => item.Date)*@
                     @Html.DisplayFor(modelItem => item.Date)
                 </td>
                 <td>
@@ -60,7 +69,8 @@
                     @Html.DisplayFor(modelItem => item.LastName)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.PhoneNumber)
+                    @string.Format("{0:(###) ###-####}", Convert.ToInt64(item.PhoneNumber))
+                    @*@Html.DisplayFor(modelItem => item.PhoneNumber)*@
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.AppointmentId">Edit</a> |
