@@ -14,8 +14,12 @@
         <h1 class="display-1"><strong>DRoP</strong></h1>
         <p>The quick brown fox jumps over the lazy dog.</p>
     </div>
-    <div style="text-align:center">
-        <input style="height:60px;width:250px;border-radius:18px;font-size:18px;background-color:white" type="button" value="Schedule an Appointment" onclick="location.href='@Url.Action("ScheduleAppointment", "DonorViews")'" />
-        <input style="height:60px;width:250px;border-radius:18px;font-size:18px;background-color:white" type="button" value="Check for Eligibility" onclick="location.href='@Url.Action("Questions", "DonorViews")'" />
+    <div class=" text-center">
+        <button type="button" style="height:60px;width:250px;border-radius:18px;font-size:18px;background-color:white">
+            @Html.ActionLink("Schedule an Appointment", "ScheduleAppointment", "DonorViews")
+        </button>
+        <button type="button" style="height:60px;width:250px;border-radius:18px;font-size:18px;background-color:white">
+            @Html.ActionLink("Check for Eligibility", "Questions", "DonorViews")
+        </button>
     </div>
 </body>
