@@ -18,6 +18,7 @@ namespace Drop.Web.Controllers
             this.db = db;
         }
 
+        [AllowAnonymous]
         public IActionResult Index()
         {
             return View();

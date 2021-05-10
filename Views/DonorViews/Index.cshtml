@@ -9,13 +9,17 @@
     <title>@ViewData["Title"] - Drop.Web</title>
 </head>
 <body>
-    <p>Donor view</p>
+    <p style="visibility:hidden">Donor view</p>
     <div class="jumbotron text-center" style="background-color:white">
         <h1 class="display-1"><strong>DRoP</strong></h1>
         <p>The quick brown fox jumps over the lazy dog.</p>
     </div>
     <div style="text-align:center">
-        <input style="height:60px;width:250px;border-radius:18px;font-size:18px;background-color:white" type="button" value="Schedule an Appointment" onclick="location.href='@Url.Action("ScheduleAppointment", "DonorViews")'" />
-        <input style="height:60px;width:250px;border-radius:18px;font-size:18px;background-color:white" type="button" value="Check for Eligibility" onclick="location.href='@Url.Action("Questions", "DonorViews")'" />
+        <input style="margin:3px;height:60px;width:250px;border-radius:18px;font-size:18px;background-color:white" type="button" 
+               value="Schedule an Appointment" 
+               onclick="location.href='@Url.Action("ScheduleAppointment", "DonorViews")'" />
+        <input style="margin: 3px;height:60px; width: 250px; border-radius: 18px; font-size: 18px; background-color: white" type="button" 
+               value="Check for Eligibility" 
+               onclick="location.href='@Url.Action("Questions", "DonorViews")'" />
     </div>
 </body>

@@ -1,4 +1,5 @@
-﻿@model IEnumerable<Drop.Web.models.DonorQuestion>
+﻿@*@model IEnumerable<Drop.Web.ViewModels.DonorViewQuestionViewModel>*@
+@model IEnumerable<Drop.Web.models.DonorQuestion> 
 
 @{
     ViewData["Title"] = "Questions";
@@ -8,6 +9,7 @@
 <h1 style="padding-bottom:10px; padding-top:10px">Screening Questions</h1>
 
 <p>
+    
     <strong>Disclaimer:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 </p>
 <table class="table" style="border:thick; border-color:black">
@@ -25,10 +27,11 @@
             <tr>
                 <td style="vertical-align:central" class="questions">
                     @Html.DisplayFor(modelItem => item.Question)
+                    @*@Html.DisplayFor(modelItem => item.dropDatabaseContext.DonorQuestions)*@
                 </td>
                 <td>
-                    <button type="submit" class="btn btn-outline-dark btn-group-lg pull" >No</button>
-                    <button type="submit" class="btn btn-outline-dark btn-group-lg  pull" >Yes</button>
+                    <button type="submit" class="btn btn-outline-dark btn-group-lg pull">No</button>
+                    <button type="submit" class="btn btn-outline-dark btn-group-lg  pull">Yes</button>
                     @*<input type="radio" value="Test"/>*@
                 </td>
             </tr>

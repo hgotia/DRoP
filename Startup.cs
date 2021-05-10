@@ -29,10 +29,10 @@ namespace Drop.Web
             services.AddControllersWithViews();
             services.AddRazorPages();
 
-            //services.AddAuthorization(opt =>
-            //{
-            //    opt.FallbackPolicy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
-            //});
+            services.AddAuthorization(opt =>
+            {
+                opt.FallbackPolicy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+            });
 
             services.AddDbContext<DropDatabaseContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("localconnection")));
         }
