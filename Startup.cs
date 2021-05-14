@@ -29,11 +29,11 @@ namespace Drop.Web
             services.AddControllersWithViews();
             services.AddRazorPages();
 
-            ////secures every pageB
-            //services.AddAuthorization(opt =>
-            //{
-            //    opt.FallbackPolicy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
-            //});
+            //secures every pageB
+            services.AddAuthorization(opt =>
+            {
+                opt.FallbackPolicy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+            });
 
             services.AddDbContext<DropDatabaseContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("AzSQLServer")));
         }

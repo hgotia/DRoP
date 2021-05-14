@@ -1,9 +1,9 @@
 {
   "dependencies": {
-    "mssql2": {
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/dropserver/databases/DropDB",
+    "mssql3": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/dropserver/databases/DropDatabase",
       "type": "mssql.azure",
-      "connectionId": "localconnection",
+      "connectionId": "AzSQLServer",
       "secretStore": "AzureAppSettings"
     }
   }

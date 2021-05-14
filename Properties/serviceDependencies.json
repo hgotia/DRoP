@@ -4,9 +4,9 @@
       "type": "mssql",
       "connectionId": "DropWebContextConnection"
     },
-    "mssql2": {
+    "mssql3": {
       "type": "mssql",
-      "connectionId": "localconnection"
+      "connectionId": "AzSQLServer"
     }
   }
 }
