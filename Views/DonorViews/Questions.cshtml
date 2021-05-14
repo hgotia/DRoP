@@ -1,33 +1,47 @@
 ﻿@*@model IEnumerable<Drop.Web.ViewModels.DonorViewQuestionViewModel>*@
-@model IEnumerable<Drop.Web.models.DonorQuestion> 
+@model IEnumerable<Drop.Web.models.DonorQuestion>
 
 @{
     ViewData["Title"] = "Questions";
     Layout = "~/Views/Shared/_Layout2.cshtml";
 }
+<!DOCTYPE html>
+<html class="has-sticky-footer">
+<body>
+    <h1 style="padding-bottom:10px; padding-top:10px">Screening Questions</h1>
 
-<h1 style="padding-bottom:10px; padding-top:10px">Screening Questions</h1>
+    <p>
+        <strong>Confidentiality Disclaimer:</strong>
+        There is NO information collected during this process and the answers you select are used solely for the purpose of checking your eligibility for donation. 
+        The questions listed below <strong> do not </strong> contain all the current questions that verifies for blood donation eligibility. The current set contains the most common disqualifiers.
+        If you are not comfortable answering any of the questions below, please email your concerns to testsite@site.com or call us at 123-123-1233.
+    </p>
 
-<p>
-    <strong>Disclaimer:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
+    <table class="table" style="border:thick; border-color:black">
+        <thead>
+            @Html.ActionLink("", "Index", new { sortOrder = ViewBag.QSortParm })
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td style="vertical-align:central" class="questions">
+                        @Html.DisplayFor(modelItem => item.Question)
+                    </td>
+                    <td>
+                        <button id="yes" onclick="yesFunction()" class="btn btn-outline-dark btn-group-lg pull" style="width:50px; margin-top:5px;">Yes</button>
+                        <button id="no" onclick="noFunction()" class="btn btn-outline-dark btn-group-lg pull" style="width:50px; margin-top:5px;">No</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
+<footer style="height:80px;">
+    <div class="text-lg-start text-center" style="vertical-align:middle;padding:10px;border:1px solid black">
+        <p style="margin-bottom:0;font-size:20px">Current eligibility status: <strong id='demo' style='color:red'>UNKNOWN</strong> </p>
+        <p>Answering 'Yes' to any question above disqualifies you from donating for the <u>same period</u> mentioned in the question.</p>
+    </div>
+</footer>
 
-<table class="table" style="border:thick; border-color:black">
-    <thead>
-        @Html.ActionLink("", "Index", new { sortOrder = ViewBag.QSortParm })
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td style="vertical-align:central" class="questions">
-                    @Html.DisplayFor(modelItem => item.Question)
-                </td>
-                <td>
-                    <button type="submit" class="btn btn-outline-dark btn-group-lg pull" style="width:50px">No</button>
-                    <button type="submit" class="btn btn-outline-dark btn-group-lg  pull" style="width:50px">Yes</button>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
