@@ -13,9 +13,8 @@ namespace Drop.Web.Controllers
 {
     public class DonorViewsController : Controller
     {
-        //private readonly ViewModels.DonorViewQuestionViewModel db;
-        private readonly models.DropDatabaseContext db;
-        //public DonorViewsController(ViewModels.DonorViewQuestionViewModel db)
+        private readonly DropDatabaseContext db;
+
         public DonorViewsController(models.DropDatabaseContext db)
         {
             this.db = db;
@@ -32,19 +31,36 @@ namespace Drop.Web.Controllers
         {
             ViewBag.QSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
 
-            //var questions = from s in db.dropDatabaseContext.DonorQuestions 
             var questions = from s in db.DonorQuestions
                             select s;
 
             questions = questions.OrderBy(s => s.Question);
 
             return View(questions.ToList());
-
-            //return View(await _context.DonorQuestions.ToListAsync());
         }
 
         [AllowAnonymous]
         public IActionResult ScheduleAppointment()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [AllowAnonymous]
+        public async Task<IActionResult> Create([Bind("AppointmentId,FirstName,LastName,PhoneNumber,Date,Time")] Appointment appointment)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Add(appointment);
+                await db.SaveChangesAsync();
+                return RedirectToAction("thanks");
+            }
+            return View(appointment);
+        }
+
+        [AllowAnonymous]
+        public IActionResult Thanks()
         {
             return View();
         }

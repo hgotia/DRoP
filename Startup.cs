@@ -29,12 +29,13 @@ namespace Drop.Web
             services.AddControllersWithViews();
             services.AddRazorPages();
 
-            services.AddAuthorization(opt =>
-            {
-                opt.FallbackPolicy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
-            });
+            ////secures every pageB
+            //services.AddAuthorization(opt =>
+            //{
+            //    opt.FallbackPolicy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+            //});
 
-            services.AddDbContext<DropDatabaseContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("localconnection")));
+            services.AddDbContext<DropDatabaseContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("AzSQLServer")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

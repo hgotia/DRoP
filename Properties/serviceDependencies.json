@@ -3,6 +3,10 @@
     "mssql1": {
       "type": "mssql",
       "connectionId": "DropWebContextConnection"
+    },
+    "mssql2": {
+      "type": "mssql",
+      "connectionId": "localconnection"
     }
   }
 }

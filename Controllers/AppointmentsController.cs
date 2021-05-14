@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Drop.Web.models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Drop.Web.Controllers
 {
@@ -100,9 +101,6 @@ namespace Drop.Web.Controllers
             return View();
         }
 
-        // POST: Appointments/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("AppointmentId,FirstName,LastName,PhoneNumber,Date,Time")] Appointment appointment)
@@ -111,7 +109,7 @@ namespace Drop.Web.Controllers
             {
                 _context.Add(appointment);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("thanks");
+                return RedirectToAction("index");
             }
             return View(appointment);
         }
@@ -201,9 +199,6 @@ namespace Drop.Web.Controllers
             return _context.Appointments.Any(e => e.AppointmentId == id);
         }
 
-        public async Task<IActionResult> Thanks()
-        {
-            return View();
-        }
+        
     }
 }

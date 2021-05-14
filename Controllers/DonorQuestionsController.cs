@@ -29,7 +29,6 @@ namespace Drop.Web.Controllers
             questions = questions.OrderBy(s => s.Question);
 
             return View(questions.ToList());
-            //return View(await _context.DonorQuestions.ToListAsync());
         }
 
         // GET: DonorQuestions/Details/5
@@ -56,9 +55,6 @@ namespace Drop.Web.Controllers
             return View();
         }
 
-        // POST: DonorQuestions/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("QuestionId,Question")] DonorQuestion donorQuestion)

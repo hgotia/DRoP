@@ -9,17 +9,12 @@
 <h1 style="padding-bottom:10px; padding-top:10px">Screening Questions</h1>
 
 <p>
-    
     <strong>Disclaimer:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 </p>
+
 <table class="table" style="border:thick; border-color:black">
     <thead>
-        <tr>
-            <th>
-                @Html.ActionLink("", "Index", new { sortOrder = ViewBag.QSortParm })
-            </th>
-            <th></th>
-        </tr>
+        @Html.ActionLink("", "Index", new { sortOrder = ViewBag.QSortParm })
     </thead>
     <tbody>
         @foreach (var item in Model)
@@ -27,12 +22,10 @@
             <tr>
                 <td style="vertical-align:central" class="questions">
                     @Html.DisplayFor(modelItem => item.Question)
-                    @*@Html.DisplayFor(modelItem => item.dropDatabaseContext.DonorQuestions)*@
                 </td>
                 <td>
-                    <button type="submit" class="btn btn-outline-dark btn-group-lg pull">No</button>
-                    <button type="submit" class="btn btn-outline-dark btn-group-lg  pull">Yes</button>
-                    @*<input type="radio" value="Test"/>*@
+                    <button type="submit" class="btn btn-outline-dark btn-group-lg pull" style="width:50px">No</button>
+                    <button type="submit" class="btn btn-outline-dark btn-group-lg  pull" style="width:50px">Yes</button>
                 </td>
             </tr>
         }
