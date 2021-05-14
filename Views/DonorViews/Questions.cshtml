@@ -6,16 +6,22 @@
     Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 <!DOCTYPE html>
+<head>
+</head>
 <html class="has-sticky-footer">
-<body>
+<body style="margin-bottom:80px">
     <h1 style="padding-bottom:10px; padding-top:10px">Screening Questions</h1>
 
     <p>
         <strong>Confidentiality Disclaimer:</strong>
-        There is NO information collected during this process and the answers you select are used solely for the purpose of checking your eligibility for donation. 
+        There is NO information collected during this process and the answers you select are used solely for the purpose of checking your eligibility for donation.
         The questions listed below <strong> do not </strong> contain all the current questions that verifies for blood donation eligibility. The current set contains the most common disqualifiers.
         If you are not comfortable answering any of the questions below, please email your concerns to testsite@site.com or call us at 123-123-1233.
     </p>
+
+    <div class="footer">
+
+    </div>
 
     <table class="table" style="border:thick; border-color:black">
         <thead>
@@ -38,10 +44,11 @@
     </table>
 </body>
 </html>
-<footer style="height:80px;">
-    <div class="text-lg-start text-center" style="vertical-align:middle;padding:10px;border:1px solid black">
-        <p style="margin-bottom:0;font-size:20px">Current eligibility status: <strong id='demo' style='color:red'>UNKNOWN</strong> </p>
-        <p>Answering 'Yes' to any question above disqualifies you from donating for the <u>same period</u> mentioned in the question.</p>
+
+<footer style="height:100px;position:fixed;width:100%;left:0;bottom:0;background-color:white">
+    <div class="text-lg-start text-center" style="vertical-align:middle;padding:10px;border-top:1px solid #D8DDE1">
+        <p style="margin-bottom:0;font-size:20px">Current status: <strong id='demo' style='color:red'>UNKNOWN</strong> </p>
+        <p style="font-size:14px">Answering 'Yes' to any question above disqualifies you from donating for the <u>same period</u> mentioned in the question.</p>
     </div>
 </footer>
 
