@@ -360,7 +360,11 @@ MigrationBackup/
 .ionide/
 
 # Fody - auto-generated XML schema
+<<<<<<< HEAD
 FodyWeavers.xsd
 
 #appsettings.json
 appsettings.json  
+=======
+FodyWeavers.xsd
+>>>>>>> parent of 0fcc42f (added appsettings.json to gitignore)
