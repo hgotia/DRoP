@@ -3,6 +3,8 @@
 > 
 DRoP (Donor Repository Platform) is an ASP.NET web application that schedules appointments and screens potential blood donors for eligibility.
 
+It's up on Azure! [Drop.Web](dropweb.azurewebsites.net)
+
 ## Table of Contents
   * [I. Entity-Relationship Diagram](#i-entity-relationship-diagram)
   * [II. Wireframe sketches](#ii-wireframe-sketches)
