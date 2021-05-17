@@ -26,7 +26,7 @@ namespace Drop.Web.Controllers
         }
 
         [AllowAnonymous]
-        public async Task<IActionResult> Questions(string sortOrder)
+        public IActionResult Questions(string sortOrder)
         {
             ViewBag.QSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
 
