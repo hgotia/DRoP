@@ -1,14 +1,16 @@
+> Describe project experience including each phase of the SDLC and the project artifacts
 
-Describe project experience including each phase of the SDLC and the project artifacts (design documents, requirements trace, test reports...)
+## Basic Plan 
+- ### Basic Requirements
 
-code and architecture walk-through
-product demonstration
+## Wireframes / Protype
 
-Lessons Learned
-- what did you do right?
+## Code and Walk-through
 
-- what did you do wrong?
+## Product demonstration
 
-- where were you lucky?
-
-- what would you change / what do you know now that you wish you knew "then"?
+## Lessons Learned
+- ### What I did right
+- ### What I did wrong
+- ### Where was I lucky
+- ### What would I change knowing what I know now
