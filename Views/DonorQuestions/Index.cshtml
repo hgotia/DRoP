@@ -1,23 +1,24 @@
 ﻿@model IEnumerable<Drop.Web.models.DonorQuestion>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Donor Questions";
 }
 
-<h1>Index</h1>
+<div>
+<h1 class="col-3" style="display:inline-block;float:left">Questions</h1>
+<a class="col-3 btn btn-block btn-primary" style="display:inline-block;align-content:end;float:right;margin-top:8px" asp-action="Create">Create New</a>
+</div>
+<p></p>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
-    <thead>
-        <tr>
+    @*<thead >
+        <tr style="visibility:hidden">
             <th>
                 @Html.ActionLink("Question", "Index", new { sortOrder = ViewBag.QSortParm })
             </th>
             <th></th>
         </tr>
-    </thead>
+    </thead>*@
     <tbody>
 @foreach (var item in Model) {
         <tr>
@@ -25,9 +26,9 @@
                 @Html.DisplayFor(modelItem => item.Question)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.QuestionId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.QuestionId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.QuestionId">Delete</a>
+                <a class="btn btn-outline-primary" style="width:70px" asp-action="Edit" asp-controller="DonorQuestions" asp-route-id="@item.QuestionId">Edit</a>
+                @*<a asp-action="Details" asp-route-id="@item.QuestionId">Details</a> |*@
+                <a class="btn btn-outline-danger" style="width:70px" asp-action="Delete" asp-route-id="@item.QuestionId">Delete</a>
             </td>
         </tr>
 }

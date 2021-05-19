@@ -1,34 +1,35 @@
 ﻿@model IEnumerable<Drop.Web.models.Appointment>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Appointments";
 }
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<div>
+    <h1>Appointments</h1>
 
 @using (Html.BeginForm())
 {
     <div class="row">
-        <div class="col-6">
+        <div class="col-sm-10" style="margin-top:8px">
+            <p>
+                @Html.ActionLink("Hide/Show Past Dates", "Index", new { sortOrder = ViewBag.ShowTodayParm })
+            </p>
+        </div>
+        <div class="col-sm-10">
             <p>
                 Find by name: @Html.TextBox("SearchString")
                 <input type="submit" value="Search" />
             </p>
         </div>
-        <div class="col-6">
-            @Html.ActionLink("Hide/Show Past Dates", "Index", new { sortOrder = ViewBag.ShowTodayParm })
-        </div>
+        @*<div class="col-sm-10">
+                <p>
+                    Find by date: @Html.TextBox("SearchDate")
+                    <input type="submit" value="Search" />
+                </p>
+            </div>*@
     </div>
-
-    @*<p style="padding-right:50px">
-         Find by date: @Html.TextBox("SearchDate")
-        <input type="submit" value="Search"/>
-    </p>*@
 }
+</div>
 <table class="table">
     <thead>
         <tr>
@@ -73,11 +74,11 @@
                     @*@Html.DisplayFor(modelItem => item.PhoneNumber)*@
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.AppointmentId">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.AppointmentId">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.AppointmentId">Delete</a>
+                    <a class="btn btn-outline-primary" style="width:70px" asp-action="Edit" asp-route-id="@item.AppointmentId">Edit</a>
+                    @*<a asp-action="Details" asp-route-id="@item.QuestionId">Details</a> |*@
+                    <a class="btn btn-outline-danger" style="width:70px" asp-action="Delete" asp-route-id="@item.AppointmentId">Delete</a>
                 </td>
-            </tr>
+            </tr>S
         }
     </tbody>
 </table>

@@ -34,18 +34,15 @@ namespace Drop.Web.Controllers
             {
                 appointment = appointment.Where(s => s.LastName.Contains(searchString)
                                        || s.FirstName.Contains(searchString));
-
             }
 
             //It's either this works, or the other functions don't.
-            //if (!String.IsNullOrEmpty(searchDate.ToString()))
-            //{
-            //    appointment = appointment.Where(s => s.Date.Day.ToString().Contains(searchDate.Day.ToString())
-            //                                         && s.Date.Month.ToString().Contains(searchDate.Month.ToString())
-            //                                         && s.Date.Year.ToString().Contains(searchDate.Year.ToString()));
-
-            //    return View(appointment.ToList());
-            //}
+            if (!String.IsNullOrEmpty(searchDate.ToString()))
+            {
+                appointment = appointment.Where(s => s.Date.Day.ToString().Contains(searchDate.Day.ToString())
+                                              || s.Date.Month.ToString().Contains(searchDate.Month.ToString())
+                                                || s.Date.Year.ToString().Contains(searchDate.Year.ToString()));
+            }
 
             switch (sortOrder)
             {
