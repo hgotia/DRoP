@@ -1,7 +1,7 @@
 
 <h1>DRoP Web Application Final Review</h1>
 
-Drop is a pretty simple project. Its main objective is to manage blood donors through a collection of dates, times, and names so that donation facilities can manage their expectations and plan accordingly. Looking back at what I’ve learned until now, I could probably redo this project and finish it in less than a week.
+Drop is a simple project. Its main objective is to manage blood donors through a collection of dates, times, and names so that donation facilities can manage their expectations and plan accordingly. Looking back at what I’ve learned until now, I could probably redo this project and finish it in less than a week.
 
 Throughout the development of DRoP, I debated over making it more complicated than it should be - the database which started with 5 tables, now only contains 2 and the amount of information that was planned to be collected, ended up being scrapped and now only takes the most minimal amount of information. 
 
