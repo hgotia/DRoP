@@ -20,9 +20,9 @@ In the end, the most important part is having a functioning application that acc
 
 | Planned | Actual |
 | - | - |
-| <img src="https://github.com/hgotia/DRoP/blob/main/Wireframe/WebPageHome.png" width="500"> | <img src="https://github.com/hgotia/DRoP/blob/main/Requirements/DropHomePage.png" width="500"> |
-| <img src="https://github.com/hgotia/DRoP/blob/main/Wireframe/WebPageScheduler.png" width="500"> | <img src="https://github.com/hgotia/DRoP/blob/main/Requirements/DropScheduler.png" width="500"> | 
-| <img src="https://github.com/hgotia/DRoP/blob/main/Wireframe/WebPageScreener.png" width="500"> | <img src="https://github.com/hgotia/DRoP/blob/main/Requirements/DropScreener.png" width="500"> | 
+| <img src="https://github.com/hgotia/DRoP/blob/main/Wireframe/WebPageHome.png" height="275"> | <img src="https://github.com/hgotia/DRoP/blob/main/Requirements/DropHomePage.png" height="275"> |
+| <img src="https://github.com/hgotia/DRoP/blob/main/Wireframe/WebPageScheduler.png" height="275"> | <img src="https://github.com/hgotia/DRoP/blob/main/Requirements/DropScheduler.png" height="275"> | 
+| <img src="https://github.com/hgotia/DRoP/blob/main/Wireframe/WebPageScreener.png" height="275"> | <img src="https://github.com/hgotia/DRoP/blob/main/Requirements/DropScreener.png" height="275"> | 
 |  <img src="https://github.com/hgotia/DRoP/blob/main/Requirements/DBDiagram2.png" width="500"> | <img src="https://github.com/hgotia/DRoP/blob/main/Requirements/Placeholder1.png" width="500"> |
 
 ## Code and Walk-through 
