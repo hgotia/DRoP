@@ -16,20 +16,42 @@ In the end, the most important part is having a functioning application that acc
   <li>Admin can view and manage appointments</li>
 </ol>
 
-## Wireframes vs Actual
+## Planned vs Actual
 
-| Wireframes | Actual |
-| ---------- | ------ |
-| <img src="https://github.com/hgotia/DRoP/blob/main/Wireframe/WebPageHome.png" width="400"> | <img src="https://github.com/hgotia/DRoP/blob/main/Requirements/DropHomePage.png" width="400">
-| <img src="https://github.com/hgotia/DRoP/blob/main/Wireframe/WebPageScheduler.png" width="400"> | <img src="https://github.com/hgotia/DRoP/blob/main/Requirements/DropScheduler.png" width="400">
-| <img src="https://github.com/hgotia/DRoP/blob/main/Wireframe/WebPageScreener.png" width="400"> | <img src="https://github.com/hgotia/DRoP/blob/main/Requirements/DropScreener.png" width="400">
+| Planned | Actual |
+| - | - |
+| <img src="https://github.com/hgotia/DRoP/blob/main/Wireframe/WebPageHome.png" width="500"> | <img src="https://github.com/hgotia/DRoP/blob/main/Requirements/DropHomePage.png" width="500"> |
+| <img src="https://github.com/hgotia/DRoP/blob/main/Wireframe/WebPageScheduler.png" width="500"> | <img src="https://github.com/hgotia/DRoP/blob/main/Requirements/DropScheduler.png" width="500"> | 
+| <img src="https://github.com/hgotia/DRoP/blob/main/Wireframe/WebPageScreener.png" width="500"> | <img src="https://github.com/hgotia/DRoP/blob/main/Requirements/DropScreener.png" width="500"> |
+|  <img src="https://github.com/hgotia/DRoP/blob/main/Requirements/DBDiagram2.png" width="500"> | place holder |
 
 ## Code and Walk-through
 
+I’m a fan of the database-first method. So I used that.
+
 ## Product demonstration
 
+https://dropweb.azurewebsites.net/ 
+
 ## Lessons Learned
-- ### What I did right
-- ### What I did wrong
-- ### Where was I lucky
-- ### What would I change knowing what I know now
+
+### What I did right
+- Like many others, I believe that I did right by choosing a simple project. It allowed me a lot of time to get distracted, never miss homework, and thankfully be a part of other projects outside of class
+- Giving up on porting from bootstrap studio
+- Signing up for the MSSA
+
+### What I did wrong
+- Procrastinated too much
+- Forcing the design from bootstrap studio into VS
+- Writing my css in the html page
+- a lot more...
+
+### Where was I lucky
+- Extremely lucky to have met people that share the same interests and that are always there ready to help
+- Being part of the PD5k and HOTS team 
+- Unity luckily runs on C# and reinforces a lot of the things from class 
+
+### What would I change knowing what I know now
+- To focus on creating an MVP. Leave the extra details for later
+- It doesn't have to be pretty, just make it do what it's supposed to do
+- Choose an adequately challenging project like a scheduling and screening application for blood donation
