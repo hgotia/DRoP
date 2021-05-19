@@ -38,7 +38,6 @@ https://dropweb.azurewebsites.net/
 ### What I did right
 - Like many others, I believe that I did right by choosing a simple project. It allowed me a lot of time to get distracted, never miss homework, and thankfully be a part of other projects outside of class
 - Giving up on porting from bootstrap studio
-- Signing up for the MSSA
 
 ### What I did wrong
 - Procrastinated too much
