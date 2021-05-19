@@ -27,7 +27,7 @@ In the end, the most important part is having a functioning application that acc
 
 ## Code and Walk-through 
 
-I’m a fan of the database-first method. So I used that.
+I like the database-first method. So I used that.
 
 ## Product demonstration
 
