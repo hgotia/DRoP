@@ -54,4 +54,5 @@ https://dropweb.azurewebsites.net/
 ### What would I change knowing what I know now
 - To focus on creating an MVP. Leave the extra details for later
 - It doesn't have to be pretty, just make it do what it's supposed to do
-- Choose an adequately challenging project like a scheduling and screening application for blood donation
+- Include the screening comments and answers in the database 
+- Use updog
